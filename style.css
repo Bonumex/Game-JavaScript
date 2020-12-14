@@ -6,4 +6,16 @@ body {
 .container {
     height: 300px;
     width: 300px;
+    background-color:black;
+    margin: auto;
+}
+
+.squere{
+    background-color: white;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    float: left;
+    font-size: 85px;
+    text-align: center;
 }
