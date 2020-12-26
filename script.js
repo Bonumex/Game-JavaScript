@@ -3,18 +3,22 @@ const allDivs = document.querySelectorAll(".squere");
 // const createSquare =  document.createElement('div');
 let counter = 0;
 
-console.log(container);
+
 // iteruje nam wszystkie divy trzeba dodac data
-allDivs.forEach((pool) => {
-    pool.id = `s+${counter}`;
-    counter++;
-});
+function renderGame () {
+    
 
-function writeSign(){
-    console.log('dziala')
+    allDivs.forEach((pool) => {
+        pool.textContent = "";
+        pool.id = `s+${counter}`;
+        counter++;
+        pool.addEventListener("click", () => {
+            pool.textContent = "X";
+        })
+    });
 }
+document.getElementById("btn").addEventListener("click", renderGame);
 
-allDivs.forEach.addEventListener("click", writeSign);
 //1 Zrobic funkcjie ktora ta data base z id zeby mozna bylo identyfikowac pola 
 
 //2 Zrobic obsluge tych pol za pomoca eventListener i ustwic go na click
